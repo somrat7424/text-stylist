@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Stylish Name Generator - Copy Fancy Text & Fonts</title>
+  <title>Stylish Name Generator - Copy Fancy Text & Fonts | StylishNamePro</title>
   <meta name="description" content="Generate stylish names and fancy text for Free Fire, PUBG, Instagram, Facebook and more. 100+ font styles, copy with one click!" />
-  <meta name="keywords" content="stylish name, fancy text, name generator, free fire name, pubg name, instagram fonts, facebook fonts, cool text" />
-  <meta name="author" content="StylishNamePro" />
+  <meta name="keywords" content="stylish name, fancy text, name generator, free fire name, pubg name, instagram fonts, facebook fonts, cool text, stylish name generator" />
+  <meta name="author" content="Somrat" />
   <meta property="og:title" content="Stylish Name Generator - Fancy Text Fonts" />
   <meta property="og:description" content="100+ stylish font styles for gaming and social media. Free & instant!" />
   <meta property="og:type" content="website" />
@@ -14,15 +14,13 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
 
-  <!-- ========== ADSTERRA TOP BANNER ========== -->
-  <!-- Replace the script below with your Adsterra banner code -->
-  <!--
-  <script async src="//your-adsterra-code.js"></script>
-  -->
+  <!-- ✅ ADSTERRA POPUNDER — before </head> -->
+  <script src="https://pl29862201.effectivecpmnetwork.com/a0/12/f1/a012f1bab5f42013192dd1a43686c794.js"></script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    /* ── THEME VARS ── */
     :root {
       --bg: #0f0f1a;
       --surface: #1a1a2e;
@@ -30,11 +28,22 @@
       --border: #2a2a4a;
       --accent: #7c3aed;
       --accent2: #a855f7;
-      --glow: #7c3aed55;
+      --glow: #7c3aed44;
       --text: #e2e8f0;
       --muted: #94a3b8;
       --success: #22c55e;
       --radius: 14px;
+    }
+    body.light {
+      --bg: #f0f4ff;
+      --surface: #ffffff;
+      --card: #f8faff;
+      --border: #dde3f0;
+      --accent: #7c3aed;
+      --accent2: #6366f1;
+      --glow: #7c3aed22;
+      --text: #1e1b4b;
+      --muted: #64748b;
     }
 
     body {
@@ -42,17 +51,19 @@
       color: var(--text);
       font-family: 'Inter', sans-serif;
       min-height: 100vh;
+      transition: background .3s, color .3s;
     }
 
     /* ── HEADER ── */
     header {
       background: var(--surface);
       border-bottom: 1px solid var(--border);
-      padding: 0 20px;
+      padding: 0 16px;
       position: sticky;
       top: 0;
       z-index: 100;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
+      transition: background .3s;
     }
     .header-inner {
       max-width: 1100px;
@@ -60,69 +71,66 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 62px;
+      height: 60px;
+      gap: 10px;
     }
     .logo {
       font-family: 'Poppins', sans-serif;
       font-weight: 800;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       background: linear-gradient(135deg, #a855f7, #7c3aed, #6366f1);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-decoration: none;
+      white-space: nowrap;
     }
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.88rem;
-      margin-left: 20px;
-      transition: color .2s;
-    }
-    nav a:hover { color: var(--accent2); }
-
-    /* ── TOP AD ── */
-    .ad-banner {
-      background: var(--surface);
-      border: 1px dashed var(--border);
-      border-radius: var(--radius);
+    .header-controls {
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: var(--muted);
+      gap: 8px;
+    }
+    .lang-toggle, .theme-toggle {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 6px 14px;
       font-size: 0.8rem;
-      text-align: center;
+      color: var(--muted);
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all .2s;
+      white-space: nowrap;
     }
-    .ad-top {
-      max-width: 728px;
-      margin: 20px auto 0;
-      height: 90px;
+    .lang-toggle:hover, .theme-toggle:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
     }
-    .ad-side {
-      width: 160px;
-      min-height: 600px;
-      flex-shrink: 0;
+
+    /* ── AD SLOTS ── */
+    .ad-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 16px 0;
     }
-    .ad-mid {
-      height: 90px;
-      margin: 24px 0;
-    }
-    .ad-bottom {
-      height: 90px;
-      max-width: 728px;
-      margin: 0 auto 24px;
-    }
+    .ad-728 { width: 728px; height: 90px; max-width: 100%; }
+    .ad-468 { width: 468px; height: 60px; max-width: 100%; }
+    .ad-320 { width: 320px; height: 50px; max-width: 100%; }
+    .ad-300 { width: 300px; height: 250px; }
+    .ad-160-600 { width: 160px; min-height: 600px; flex-shrink: 0; }
+    .ad-160-300 { width: 160px; height: 300px; flex-shrink: 0; }
 
     /* ── HERO ── */
     .hero {
       text-align: center;
-      padding: 40px 20px 20px;
+      padding: 36px 16px 16px;
     }
     .hero h1 {
       font-family: 'Poppins', sans-serif;
-      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-size: clamp(1.7rem, 5vw, 2.8rem);
       font-weight: 800;
       line-height: 1.2;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .hero h1 span {
       background: linear-gradient(135deg, #a855f7, #6366f1);
@@ -131,24 +139,26 @@
     }
     .hero p {
       color: var(--muted);
-      font-size: 1rem;
+      font-size: 0.97rem;
       max-width: 520px;
-      margin: 0 auto 28px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
     }
 
-    /* ── INPUT AREA ── */
+    /* ── INPUT ── */
     .input-wrap {
-      max-width: 700px;
+      max-width: 680px;
       margin: 0 auto 10px;
       position: relative;
+      padding: 0 16px;
     }
     .input-wrap input {
       width: 100%;
       background: var(--surface);
       border: 2px solid var(--border);
       border-radius: 50px;
-      padding: 16px 130px 16px 24px;
-      font-size: 1.1rem;
+      padding: 15px 130px 15px 22px;
+      font-size: 1.05rem;
       color: var(--text);
       outline: none;
       transition: border-color .2s, box-shadow .2s;
@@ -161,68 +171,66 @@
     .input-wrap input::placeholder { color: var(--muted); }
     .btn-generate {
       position: absolute;
-      right: 6px;
+      right: 22px;
       top: 50%;
       transform: translateY(-50%);
       background: linear-gradient(135deg, var(--accent), #6366f1);
       color: #fff;
       border: none;
       border-radius: 50px;
-      padding: 10px 24px;
-      font-size: 0.95rem;
-      font-weight: 600;
+      padding: 9px 22px;
+      font-size: 0.92rem;
+      font-weight: 700;
       cursor: pointer;
       font-family: 'Poppins', sans-serif;
       transition: opacity .2s, transform .15s;
     }
-    .btn-generate:hover { opacity: .9; transform: translateY(-50%) scale(1.03); }
+    .btn-generate:hover { opacity: .88; transform: translateY(-50%) scale(1.04); }
     .btn-generate:active { transform: translateY(-50%) scale(0.97); }
 
     .quick-tags {
       text-align: center;
-      margin-bottom: 20px;
+      padding: 0 12px;
+      margin-bottom: 18px;
     }
     .quick-tags span {
       display: inline-block;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 50px;
-      padding: 4px 14px;
-      font-size: 0.78rem;
+      padding: 4px 13px;
+      font-size: 0.76rem;
       color: var(--muted);
-      margin: 4px 3px;
+      margin: 3px 2px;
       cursor: pointer;
       transition: all .2s;
     }
-    .quick-tags span:hover {
-      border-color: var(--accent2);
-      color: var(--accent2);
-    }
+    .quick-tags span:hover { border-color: var(--accent2); color: var(--accent2); }
 
     /* ── MAIN LAYOUT ── */
     .main-wrap {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 0 16px 40px;
+      padding: 0 14px 40px;
       display: flex;
-      gap: 24px;
+      gap: 20px;
       align-items: flex-start;
     }
     .results-area { flex: 1; min-width: 0; }
 
-    /* ── FILTER TABS ── */
+    /* ── FILTER ── */
     .filter-bar {
       display: flex;
-      gap: 8px;
+      gap: 7px;
       flex-wrap: wrap;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     .filter-btn {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 50px;
-      padding: 6px 16px;
-      font-size: 0.82rem;
+      padding: 5px 15px;
+      font-size: 0.8rem;
       color: var(--muted);
       cursor: pointer;
       transition: all .2s;
@@ -234,44 +242,32 @@
       color: #fff;
     }
 
-    /* ── RESULTS GRID ── */
-    .results-count {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-    .results-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    @media(max-width: 600px) { .results-grid { grid-template-columns: 1fr; } }
+    /* ── RESULT CARDS ── */
+    .results-count { font-size: 0.83rem; color: var(--muted); margin-bottom: 10px; }
+    .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    @media(max-width: 580px) { .results-grid { grid-template-columns: 1fr; } }
 
     .font-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 14px 16px;
+      padding: 13px 15px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
       transition: border-color .2s, box-shadow .2s;
-      cursor: default;
     }
-    .font-card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 0 12px var(--glow);
-    }
+    .font-card:hover { border-color: var(--accent); box-shadow: 0 0 14px var(--glow); }
     .font-card .font-label {
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       color: var(--muted);
       margin-bottom: 4px;
       text-transform: uppercase;
       letter-spacing: .5px;
     }
     .font-card .font-text {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--text);
       word-break: break-all;
       line-height: 1.4;
@@ -280,27 +276,18 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 7px 14px;
+      padding: 6px 13px;
       color: var(--muted);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       cursor: pointer;
       white-space: nowrap;
       font-family: 'Inter', sans-serif;
       transition: all .2s;
       flex-shrink: 0;
     }
-    .copy-btn:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #fff;
-    }
-    .copy-btn.copied {
-      background: var(--success);
-      border-color: var(--success);
-      color: #fff;
-    }
+    .copy-btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .copy-btn.copied { background: var(--success); border-color: var(--success); color: #fff; }
 
-    /* empty state */
     .empty-state {
       text-align: center;
       padding: 60px 20px;
@@ -308,65 +295,110 @@
       grid-column: 1/-1;
     }
     .empty-state .emoji { font-size: 3rem; margin-bottom: 12px; }
-    .empty-state p { font-size: 1rem; }
+
+    /* ── MID AD ── */
+    .mid-ad-wrap { display: none; justify-content: center; margin: 18px 0; }
+
+    /* ── SIDE ADS ── */
+    @media(max-width: 860px) { .ad-side-col { display: none !important; } }
+
+    /* ── CREDIT SECTION ── */
+    .credit-section {
+      max-width: 1100px;
+      margin: 0 auto 30px;
+      padding: 0 14px;
+    }
+    .credit-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .credit-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #6366f1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+    .credit-info h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .credit-info p { font-size: 0.83rem; color: var(--muted); margin-bottom: 10px; }
+    .credit-links { display: flex; gap: 10px; flex-wrap: wrap; }
+    .credit-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 7px 16px;
+      font-size: 0.8rem;
+      color: var(--text);
+      text-decoration: none;
+      transition: all .2s;
+      font-weight: 500;
+    }
+    .credit-link:hover { border-color: var(--accent2); color: var(--accent2); }
+    .credit-link.whatsapp:hover { border-color: #25d366; color: #25d366; }
+    .credit-link.facebook:hover { border-color: #1877f2; color: #1877f2; }
 
     /* ── INFO SECTION ── */
     .info-section {
       max-width: 1100px;
       margin: 0 auto 40px;
-      padding: 0 16px;
+      padding: 0 14px;
     }
     .info-section h2 {
       font-family: 'Poppins', sans-serif;
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 700;
-      margin-bottom: 16px;
-      color: var(--text);
+      margin-bottom: 14px;
     }
     .info-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-      margin-bottom: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+      margin-bottom: 28px;
     }
     .info-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 20px;
+      padding: 18px;
     }
-    .info-card .icon { font-size: 1.8rem; margin-bottom: 10px; }
-    .info-card h3 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-    .info-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+    .info-card .icon { font-size: 1.7rem; margin-bottom: 9px; }
+    .info-card h3 { font-family: 'Poppins', sans-serif; font-size: 0.97rem; font-weight: 600; margin-bottom: 5px; }
+    .info-card p { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
 
     .faq-item {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 18px 20px;
-      margin-bottom: 10px;
+      padding: 16px 18px;
+      margin-bottom: 9px;
       cursor: pointer;
     }
     .faq-item h3 {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 600;
-      color: var(--text);
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .faq-item p {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-top: 10px;
-      line-height: 1.6;
-      display: none;
-    }
+    .faq-item p { font-size: 0.83rem; color: var(--muted); margin-top: 10px; line-height: 1.6; display: none; }
     .faq-item.open p { display: block; }
     .faq-item .arrow { transition: transform .3s; }
     .faq-item.open .arrow { transform: rotate(180deg); }
@@ -375,60 +407,78 @@
     footer {
       background: var(--surface);
       border-top: 1px solid var(--border);
-      padding: 30px 20px;
+      padding: 28px 16px;
       text-align: center;
+      transition: background .3s;
     }
-    footer .footer-links a {
+    .footer-links a {
       color: var(--muted);
       text-decoration: none;
-      font-size: 0.85rem;
-      margin: 0 12px;
+      font-size: 0.83rem;
+      margin: 0 10px;
       transition: color .2s;
     }
-    footer .footer-links a:hover { color: var(--accent2); }
-    footer p {
-      margin-top: 12px;
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
+    .footer-links a:hover { color: var(--accent2); }
+    footer p { margin-top: 10px; font-size: 0.76rem; color: var(--muted); }
 
-    @media(max-width: 768px) {
-      .ad-side { display: none; }
-      .ad-top { height: 60px; }
+    /* ── MOBILE AD ── */
+    .mobile-ad-320 { display: none; }
+    @media(max-width: 600px) {
+      .mobile-ad-320 { display: flex; }
+      .desktop-ad-728 { display: none; }
     }
   </style>
 </head>
-<body>
+<body class="dark">
 
-<!-- HEADER -->
+<!-- ══════════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
 <header>
   <div class="header-inner">
     <a href="/" class="logo">✦ StylishNamePro</a>
-    <nav>
-      <a href="#how">How to Use</a>
-      <a href="#faq">FAQ</a>
-    </nav>
+    <div class="header-controls">
+      <button class="lang-toggle" onclick="toggleLang()" id="langBtn">বাংলা</button>
+      <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">☀️ Light</button>
+    </div>
   </div>
 </header>
 
-<!-- TOP AD BANNER (728x90) -->
-<div class="ad-banner ad-top">
-  <!-- ✅ ADSTERRA: Paste your 728x90 banner code here -->
-  <span>[ Adsterra Ad — 728×90 ]</span>
+<!-- ══════════════════════════════════════
+     TOP AD — 728x90 (desktop) / 320x50 (mobile)
+══════════════════════════════════════ -->
+<div class="ad-wrap desktop-ad-728">
+  <div class="ad-728">
+    <script>
+      atOptions = { 'key': '8043ddf6b7d62ca7e42e438ef3f2fbdd', 'format': 'iframe', 'height': 90, 'width': 728, 'params': {} };
+    </script>
+    <script src="https://www.highperformanceformat.com/8043ddf6b7d62ca7e42e438ef3f2fbdd/invoke.js"></script>
+  </div>
+</div>
+<div class="ad-wrap mobile-ad-320">
+  <div class="ad-320">
+    <script>
+      atOptions = { 'key': '03f9d80737a82443f91cb0255e34e46f', 'format': 'iframe', 'height': 50, 'width': 320, 'params': {} };
+    </script>
+    <script src="https://www.highperformanceformat.com/03f9d80737a82443f91cb0255e34e46f/invoke.js"></script>
+  </div>
 </div>
 
-<!-- HERO -->
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
 <div class="hero">
-  <h1>✦ <span>Stylish Name</span> Generator</h1>
-  <p>Type your name and get 100+ fancy text styles instantly. Perfect for Free Fire, PUBG, Instagram & Facebook.</p>
+  <h1 id="heroTitle">✦ <span>Stylish Name</span> Generator</h1>
+  <p id="heroDesc">Type your name below and instantly get 100+ fancy Unicode font styles. Perfect for Free Fire, PUBG, Instagram &amp; Facebook.</p>
 </div>
 
 <!-- INPUT -->
 <div class="input-wrap">
   <input type="text" id="nameInput" placeholder="Type your name here..." maxlength="30" autocomplete="off" />
-  <button class="btn-generate" onclick="generateFonts()">Generate ✨</button>
+  <button class="btn-generate" onclick="generateFonts()" id="genBtn">Generate ✨</button>
 </div>
-<div class="quick-tags">
+<div class="quick-tags" id="quickTags">
+  <span onclick="setName('Somrat')">Somrat</span>
   <span onclick="setName('Raju')">Raju</span>
   <span onclick="setName('Sami')">Sami</span>
   <span onclick="setName('Rakib')">Rakib</span>
@@ -437,101 +487,161 @@
   <span onclick="setName('Devil')">Devil</span>
   <span onclick="setName('Pro')">Pro</span>
   <span onclick="setName('Shadow')">Shadow</span>
+  <span onclick="setName('Fire')">Fire</span>
 </div>
 
-<!-- MAIN -->
+<!-- ══════════════════════════════════════
+     MAIN — 3-col: Left Ad | Results | Right Ad
+══════════════════════════════════════ -->
 <div class="main-wrap">
 
-  <!-- LEFT SIDE AD (160x600) -->
-  <div class="ad-banner ad-side">
-    <!-- ✅ ADSTERRA: Paste your 160x600 sidebar ad code here -->
-    <span>[ Adsterra<br>160×600 ]</span>
+  <!-- LEFT SIDE AD 160x600 -->
+  <div class="ad-side-col" style="display:flex;">
+    <div class="ad-160-600">
+      <script>
+        atOptions = { 'key': '389145bd412243bf40a5b9826b980813', 'format': 'iframe', 'height': 600, 'width': 160, 'params': {} };
+      </script>
+      <script src="https://www.highperformanceformat.com/389145bd412243bf40a5b9826b980813/invoke.js"></script>
+    </div>
   </div>
 
-  <!-- RESULTS -->
+  <!-- RESULTS AREA -->
   <div class="results-area">
+
+    <!-- FILTER TABS -->
     <div class="filter-bar" id="filterBar">
-      <button class="filter-btn active" onclick="filterFonts('all', this)">All Styles</button>
-      <button class="filter-btn" onclick="filterFonts('cursive', this)">Cursive</button>
-      <button class="filter-btn" onclick="filterFonts('bold', this)">Bold</button>
-      <button class="filter-btn" onclick="filterFonts('bubble', this)">Bubble</button>
-      <button class="filter-btn" onclick="filterFonts('gothic', this)">Gothic</button>
-      <button class="filter-btn" onclick="filterFonts('symbol', this)">Symbol</button>
-      <button class="filter-btn" onclick="filterFonts('fancy', this)">Fancy</button>
+      <button class="filter-btn active" onclick="filterFonts('all',this)" data-en="All Styles" data-bn="সব স্টাইল">All Styles</button>
+      <button class="filter-btn" onclick="filterFonts('cursive',this)" data-en="Cursive" data-bn="কার্সিভ">Cursive</button>
+      <button class="filter-btn" onclick="filterFonts('bold',this)" data-en="Bold" data-bn="বোল্ড">Bold</button>
+      <button class="filter-btn" onclick="filterFonts('bubble',this)" data-en="Bubble" data-bn="বাবল">Bubble</button>
+      <button class="filter-btn" onclick="filterFonts('gothic',this)" data-en="Gothic" data-bn="গথিক">Gothic</button>
+      <button class="filter-btn" onclick="filterFonts('symbol',this)" data-en="Symbol" data-bn="সিম্বল">Symbol</button>
+      <button class="filter-btn" onclick="filterFonts('fancy',this)" data-en="Fancy" data-bn="ফ্যান্সি">Fancy</button>
     </div>
 
     <div class="results-count" id="resultsCount"></div>
 
-    <!-- MID AD -->
-    <div class="ad-banner ad-mid" id="midAd" style="display:none">
-      <!-- ✅ ADSTERRA: Paste your mid-page banner code here -->
-      <span>[ Adsterra Ad — 728×90 ]</span>
+    <!-- MID AD 468x60 -->
+    <div class="mid-ad-wrap" id="midAdWrap">
+      <div class="ad-468">
+        <script>
+          atOptions = { 'key': '26a7ff1f1a467abfe26cc357a9176dca', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+        </script>
+        <script src="https://www.highperformanceformat.com/26a7ff1f1a467abfe26cc357a9176dca/invoke.js"></script>
+      </div>
     </div>
 
     <div class="results-grid" id="resultsGrid">
       <div class="empty-state">
         <div class="emoji">✦</div>
-        <p>Type your name above and click <strong>Generate</strong></p>
+        <p id="emptyMsg">Type your name above and click <strong>Generate</strong></p>
+      </div>
+    </div>
+
+    <!-- AFTER RESULTS AD 300x250 -->
+    <div style="display:flex;justify-content:center;margin-top:20px;" id="afterResultsAd" style="display:none;">
+      <div class="ad-300">
+        <script>
+          atOptions = { 'key': '13a59ee10176ebb5acb2cd87a71e337b', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+        </script>
+        <script src="https://www.highperformanceformat.com/13a59ee10176ebb5acb2cd87a71e337b/invoke.js"></script>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDE AD 160x300 -->
+  <div class="ad-side-col" style="display:flex;flex-direction:column;gap:16px;">
+    <div class="ad-160-300">
+      <script>
+        atOptions = { 'key': '457cd2ab73a5206d637cf6b4b133082e', 'format': 'iframe', 'height': 300, 'width': 160, 'params': {} };
+      </script>
+      <script src="https://www.highperformanceformat.com/457cd2ab73a5206d637cf6b4b133082e/invoke.js"></script>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════
+     BOTTOM 728x90 AD
+══════════════════════════════════════ -->
+<div class="ad-wrap" style="margin-bottom:24px;">
+  <div class="ad-728">
+    <script>
+      atOptions = { 'key': '8043ddf6b7d62ca7e42e438ef3f2fbdd', 'format': 'iframe', 'height': 90, 'width': 728, 'params': {} };
+    </script>
+    <script src="https://www.highperformanceformat.com/8043ddf6b7d62ca7e42e438ef3f2fbdd/invoke.js"></script>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CREDIT SECTION
+══════════════════════════════════════ -->
+<div class="credit-section">
+  <div class="credit-card">
+    <div class="credit-avatar">👑</div>
+    <div class="credit-info">
+      <h3 id="creditTitle">Made by Somrat</h3>
+      <p id="creditDesc">Developer & Creator of StylishNamePro — Feel free to contact!</p>
+      <div class="credit-links">
+        <a href="https://wa.me/8801704732174" target="_blank" rel="noopener" class="credit-link whatsapp">
+          💬 WhatsApp
+        </a>
+        <a href="https://www.facebook.com/mdmikailhossensomrat1" target="_blank" rel="noopener" class="credit-link facebook">
+          👤 Facebook
+        </a>
+        <a href="https://somrat7424.github.io" target="_blank" rel="noopener" class="credit-link">
+          🌐 Website
+        </a>
       </div>
     </div>
   </div>
-
-  <!-- RIGHT SIDE AD (160x600) -->
-  <div class="ad-banner ad-side">
-    <!-- ✅ ADSTERRA: Paste your 160x600 sidebar ad code here -->
-    <span>[ Adsterra<br>160×600 ]</span>
-  </div>
-
 </div>
 
-<!-- BOTTOM AD -->
-<div class="ad-banner ad-bottom">
-  <!-- ✅ ADSTERRA: Paste your bottom banner ad code here -->
-  <span>[ Adsterra Ad — 728×90 ]</span>
-</div>
-
-<!-- INFO SECTION -->
+<!-- ══════════════════════════════════════
+     HOW TO USE + FAQ
+══════════════════════════════════════ -->
 <div class="info-section" id="how">
-  <h2>How to Use Stylish Name Generator</h2>
+  <h2 id="howTitle">How to Use Stylish Name Generator</h2>
   <div class="info-grid">
     <div class="info-card">
       <div class="icon">⌨️</div>
-      <h3>1. Type Your Name</h3>
-      <p>Enter your name or any text in the input box above. You can type up to 30 characters.</p>
+      <h3 id="step1Title">1. Type Your Name</h3>
+      <p id="step1Desc">Enter your name or any text in the input box. You can type up to 30 characters.</p>
     </div>
     <div class="info-card">
       <div class="icon">✨</div>
-      <h3>2. Click Generate</h3>
-      <p>Hit the Generate button and instantly get 100+ stylish font variations of your name.</p>
+      <h3 id="step2Title">2. Click Generate</h3>
+      <p id="step2Desc">Hit Generate and instantly get 100+ stylish font variations of your name.</p>
     </div>
     <div class="info-card">
       <div class="icon">📋</div>
-      <h3>3. Copy & Paste</h3>
-      <p>Click the Copy button next to any style you like and paste it anywhere — games or social media.</p>
+      <h3 id="step3Title">3. Copy & Paste</h3>
+      <p id="step3Desc">Click Copy next to any style and paste it anywhere — games or social media.</p>
     </div>
     <div class="info-card">
       <div class="icon">🎮</div>
-      <h3>Works Everywhere</h3>
-      <p>Use your stylish name in Free Fire, PUBG Mobile, Instagram bio, Facebook name, and more.</p>
+      <h3 id="step4Title">Works Everywhere</h3>
+      <p id="step4Desc">Free Fire, PUBG Mobile, Instagram bio, Facebook name, TikTok, and more.</p>
     </div>
   </div>
 
-  <h2 id="faq">Frequently Asked Questions</h2>
+  <h2 id="faqTitle" style="margin-bottom:14px;">FAQ</h2>
   <div class="faq-item" onclick="toggleFaq(this)">
-    <h3>What is a Stylish Name Generator? <span class="arrow">▾</span></h3>
-    <p>A stylish name generator is a free tool that converts your regular text into fancy Unicode characters. These special characters look like different fonts and can be copied and pasted anywhere that supports text input.</p>
+    <h3 id="faq1q">What is a Stylish Name Generator? <span class="arrow">▾</span></h3>
+    <p id="faq1a">A stylish name generator converts your regular text into fancy Unicode characters that look like different fonts. They can be copied and pasted anywhere that supports text input.</p>
   </div>
   <div class="faq-item" onclick="toggleFaq(this)">
-    <h3>How does fancy text work? <span class="arrow">▾</span></h3>
-    <p>Fancy text uses Unicode characters — a universal character encoding standard — that look like styled letters. They aren't actual fonts, but special Unicode symbols that appear as decorative characters in any app.</p>
+    <h3 id="faq2q">How does fancy text work? <span class="arrow">▾</span></h3>
+    <p id="faq2a">Fancy text uses Unicode — a universal character standard — that appear as stylish letters in any app, without needing a special font installed.</p>
   </div>
   <div class="faq-item" onclick="toggleFaq(this)">
-    <h3>Can I use these names in Free Fire & PUBG? <span class="arrow">▾</span></h3>
-    <p>Yes! Most stylish name styles work in Free Fire, PUBG Mobile, and other games. Simply copy the name and paste it into the nickname input in your game settings.</p>
+    <h3 id="faq3q">Can I use these names in Free Fire & PUBG? <span class="arrow">▾</span></h3>
+    <p id="faq3a">Yes! Most styles work in Free Fire and PUBG Mobile. Copy the name and paste it into the nickname field in your game settings.</p>
   </div>
   <div class="faq-item" onclick="toggleFaq(this)">
-    <h3>Is this tool free to use? <span class="arrow">▾</span></h3>
-    <p>Yes, StylishNamePro is 100% free. No signup, no login, no limits. Generate as many stylish names as you want!</p>
+    <h3 id="faq4q">Is this tool free? <span class="arrow">▾</span></h3>
+    <p id="faq4a">100% free. No signup, no login, no limits. Generate as many stylish names as you want!</p>
   </div>
 </div>
 
@@ -540,229 +650,280 @@
   <div class="footer-links">
     <a href="#">Home</a>
     <a href="#">Privacy Policy</a>
-    <a href="#">Terms of Use</a>
-    <a href="#">Contact</a>
-    <a href="#">About</a>
+    <a href="#">Terms</a>
+    <a href="https://wa.me/8801704732174" target="_blank">Contact</a>
+    <a href="https://www.facebook.com/mdmikailhossensomrat1" target="_blank">Facebook</a>
   </div>
-  <p>© 2024 StylishNamePro. All rights reserved. | Unicode Fancy Text Generator</p>
+  <p>© 2024 StylishNamePro by <strong>Somrat</strong> | somrat7424.github.io</p>
 </footer>
 
+<!-- ✅ ADSTERRA SOCIAL BAR — right before </body> -->
+<script src="https://pl29862203.effectivecpmnetwork.com/23/6d/39/236d395ef813d1eaf8722329eef4a797.js"></script>
+
 <script>
-// ═══════════════════════════════════════════
-//  FONT DATA — 100+ styles with categories
-// ═══════════════════════════════════════════
+// ════════════════════════════════════════
+//  LANGUAGE SYSTEM
+// ════════════════════════════════════════
+let isEnglish = true;
+
+const translations = {
+  en: {
+    heroTitle: '✦ <span>Stylish Name</span> Generator',
+    heroDesc: 'Type your name below and instantly get 100+ fancy Unicode font styles. Perfect for Free Fire, PUBG, Instagram & Facebook.',
+    genBtn: 'Generate ✨',
+    emptyMsg: 'Type your name above and click <strong>Generate</strong>',
+    howTitle: 'How to Use Stylish Name Generator',
+    step1Title: '1. Type Your Name', step1Desc: 'Enter your name or any text in the input box. You can type up to 30 characters.',
+    step2Title: '2. Click Generate', step2Desc: 'Hit Generate and instantly get 100+ stylish font variations of your name.',
+    step3Title: '3. Copy & Paste', step3Desc: 'Click Copy next to any style and paste it anywhere — games or social media.',
+    step4Title: 'Works Everywhere', step4Desc: 'Free Fire, PUBG Mobile, Instagram bio, Facebook name, TikTok, and more.',
+    faqTitle: 'FAQ',
+    faq1q: 'What is a Stylish Name Generator? ▾', faq1a: 'A stylish name generator converts your regular text into fancy Unicode characters that look like different fonts. They can be copied and pasted anywhere.',
+    faq2q: 'How does fancy text work? ▾', faq2a: 'Fancy text uses Unicode — a universal character standard — that appear as stylish letters in any app, without needing a special font installed.',
+    faq3q: 'Can I use these names in Free Fire & PUBG? ▾', faq3a: 'Yes! Most styles work in Free Fire and PUBG Mobile. Copy and paste into the nickname field in game settings.',
+    faq4q: 'Is this tool free? ▾', faq4a: '100% free. No signup, no login, no limits. Generate as many stylish names as you want!',
+    placeholder: 'Type your name here...',
+    creditTitle: 'Made by Somrat',
+    creditDesc: 'Developer & Creator of StylishNamePro — Feel free to contact!',
+    langBtn: 'বাংলা', themeBtn: '☀️ Light',
+    resultsFor: 'styles found for',
+  },
+  bn: {
+    heroTitle: '✦ <span>স্টাইলিশ নাম</span> জেনারেটর',
+    heroDesc: 'নিচে তোমার নাম টাইপ করো এবং সাথে সাথে ১০০+ ফ্যান্সি ইউনিকোড ফন্ট স্টাইল পাও। Free Fire, PUBG, Instagram ও Facebook-এর জন্য পারফেক্ট।',
+    genBtn: 'জেনারেট করো ✨',
+    emptyMsg: 'উপরে তোমার নাম লিখে <strong>জেনারেট</strong> চাপো',
+    howTitle: 'স্টাইলিশ নাম জেনারেটর কীভাবে ব্যবহার করবে',
+    step1Title: '১. নাম টাইপ করো', step1Desc: 'ইনপুট বক্সে তোমার নাম বা যেকোনো টেক্সট লেখো। সর্বোচ্চ ৩০ ক্যারেক্টার লেখা যাবে।',
+    step2Title: '২. জেনারেট চাপো', step2Desc: 'জেনারেট বাটন চাপো এবং সাথে সাথে ১০০+ স্টাইলিশ ফন্ট ভ্যারিয়েশন দেখো।',
+    step3Title: '৩. কপি ও পেস্ট করো', step3Desc: 'যেকোনো স্টাইলের পাশে Copy বাটন চাপো এবং গেমে বা সোশ্যাল মিডিয়ায় পেস্ট করো।',
+    step4Title: 'সব জায়গায় কাজ করে', step4Desc: 'Free Fire, PUBG Mobile, Instagram bio, Facebook নাম, TikTok এবং আরও অনেক জায়গায়।',
+    faqTitle: 'সাধারণ প্রশ্নোত্তর',
+    faq1q: 'স্টাইলিশ নাম জেনারেটর কী? ▾', faq1a: 'স্টাইলিশ নাম জেনারেটর তোমার সাধারণ টেক্সটকে ফ্যান্সি ইউনিকোড ক্যারেক্টারে রূপান্তর করে যা ভিন্ন ফন্টের মতো দেখায় এবং যেকোনো জায়গায় কপি-পেস্ট করা যায়।',
+    faq2q: 'ফ্যান্সি টেক্সট কীভাবে কাজ করে? ▾', faq2a: 'ফ্যান্সি টেক্সট Unicode ব্যবহার করে — একটি সার্বজনীন ক্যারেক্টার স্ট্যান্ডার্ড — যা যেকোনো অ্যাপে স্টাইলিশ অক্ষরের মতো দেখায়।',
+    faq3q: 'Free Fire ও PUBG-তে এই নাম ব্যবহার করা যাবে? ▾', faq3a: 'হ্যাঁ! বেশিরভাগ স্টাইল Free Fire এবং PUBG Mobile-এ কাজ করে। নামটি কপি করে গেমের নিকনেম সেটিংসে পেস্ট করো।',
+    faq4q: 'এই টুলটি কি ফ্রি? ▾', faq4a: '১০০% ফ্রি। কোনো সাইনআপ নেই, লগইন নেই, কোনো সীমা নেই। যত খুশি স্টাইলিশ নাম বানাও!',
+    placeholder: 'এখানে তোমার নাম লেখো...',
+    creditTitle: 'তৈরি করেছেন Somrat',
+    creditDesc: 'StylishNamePro-র ডেভেলপার ও ক্রিয়েটর — যোগাযোগ করতে দ্বিধা করো না!',
+    langBtn: 'English',
+    themeBtn: '☀️ লাইট',
+    resultsFor: 'টি স্টাইল পাওয়া গেছে',
+  }
+};
+
+function toggleLang() {
+  isEnglish = !isEnglish;
+  applyLang();
+}
+
+function applyLang() {
+  const t = isEnglish ? translations.en : translations.bn;
+  document.getElementById('heroTitle').innerHTML = t.heroTitle;
+  document.getElementById('heroDesc').textContent = t.heroDesc;
+  document.getElementById('genBtn').textContent = t.genBtn;
+  document.getElementById('emptyMsg').innerHTML = t.emptyMsg;
+  document.getElementById('howTitle').textContent = t.howTitle;
+  document.getElementById('step1Title').textContent = t.step1Title;
+  document.getElementById('step1Desc').textContent = t.step1Desc;
+  document.getElementById('step2Title').textContent = t.step2Title;
+  document.getElementById('step2Desc').textContent = t.step2Desc;
+  document.getElementById('step3Title').textContent = t.step3Title;
+  document.getElementById('step3Desc').textContent = t.step3Desc;
+  document.getElementById('step4Title').textContent = t.step4Title;
+  document.getElementById('step4Desc').textContent = t.step4Desc;
+  document.getElementById('faqTitle').textContent = t.faqTitle;
+  document.getElementById('faq1q').innerHTML = t.faq1q;
+  document.getElementById('faq1a').textContent = t.faq1a;
+  document.getElementById('faq2q').innerHTML = t.faq2q;
+  document.getElementById('faq2a').textContent = t.faq2a;
+  document.getElementById('faq3q').innerHTML = t.faq3q;
+  document.getElementById('faq3a').textContent = t.faq3a;
+  document.getElementById('faq4q').innerHTML = t.faq4q;
+  document.getElementById('faq4a').textContent = t.faq4a;
+  document.getElementById('nameInput').placeholder = t.placeholder;
+  document.getElementById('creditTitle').textContent = t.creditTitle;
+  document.getElementById('creditDesc').textContent = t.creditDesc;
+  document.getElementById('langBtn').textContent = t.langBtn;
+
+  // Update filter buttons
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    const key = isEnglish ? 'data-en' : 'data-bn';
+    if (btn.getAttribute(key)) btn.textContent = btn.getAttribute(key);
+  });
+
+  if (lastText) {
+    const cnt = currentFilter === 'all' ? fonts.length : fonts.filter(f=>f.category===currentFilter).length;
+    document.getElementById('resultsCount').textContent = isEnglish
+      ? `${cnt} styles found for "${lastText}"`
+      : `"${lastText}" এর জন্য ${cnt}টি স্টাইল পাওয়া গেছে`;
+  }
+}
+
+// ════════════════════════════════════════
+//  THEME TOGGLE
+// ════════════════════════════════════════
+function toggleTheme() {
+  const body = document.body;
+  const btn = document.getElementById('themeBtn');
+  if (body.classList.contains('light')) {
+    body.classList.remove('light');
+    btn.textContent = isEnglish ? '☀️ Light' : '☀️ লাইট';
+  } else {
+    body.classList.add('light');
+    btn.textContent = isEnglish ? '🌙 Dark' : '🌙 ডার্ক';
+  }
+}
+
+// ════════════════════════════════════════
+//  FONT DATA
+// ════════════════════════════════════════
 const fonts = [
-  // CURSIVE
-  { label: "Cursive Script", category: "cursive", fn: t => toScript(t) },
-  { label: "Bold Cursive", category: "cursive", fn: t => toBoldScript(t) },
-  { label: "Italic Cursive", category: "cursive", fn: t => toItalic(t) },
-  { label: "Double Struck", category: "cursive", fn: t => toDoubleStruck(t) },
-
-  // BOLD
-  { label: "Bold Serif", category: "bold", fn: t => toBoldSerif(t) },
-  { label: "Bold Italic Serif", category: "bold", fn: t => toBoldItalic(t) },
-  { label: "Bold Sans", category: "bold", fn: t => toBoldSans(t) },
-  { label: "Bold Italic Sans", category: "bold", fn: t => toBoldItalicSans(t) },
-
-  // BUBBLE
-  { label: "Bubble Text ⓑ", category: "bubble", fn: t => toBubble(t) },
-  { label: "Negative Bubble", category: "bubble", fn: t => toNegBubble(t) },
-  { label: "Square Box", category: "bubble", fn: t => toSquare(t) },
-  { label: "Negative Square", category: "bubble", fn: t => toNegSquare(t) },
-
-  // GOTHIC
-  { label: "Gothic / Fraktur", category: "gothic", fn: t => toFraktur(t) },
-  { label: "Bold Fraktur", category: "gothic", fn: t => toBoldFraktur(t) },
-  { label: "Gothic Double", category: "gothic", fn: t => toGothicDouble(t) },
-
-  // SYMBOL — decorative combos
+  { label: "Cursive Script", category: "cursive", fn: t => toMap(maps.script, t) },
+  { label: "Bold Cursive", category: "cursive", fn: t => toMap(maps.boldScript, t) },
+  { label: "Italic", category: "cursive", fn: t => toMap(maps.italic, t) },
+  { label: "Double Struck", category: "cursive", fn: t => toMap(maps.doubleStruck, t) },
+  { label: "Bold Serif", category: "bold", fn: t => toMap(maps.boldSerif, t) },
+  { label: "Bold Italic Serif", category: "bold", fn: t => toMap(maps.boldItalic, t) },
+  { label: "Bold Sans", category: "bold", fn: t => toMap(maps.boldSans, t) },
+  { label: "Bold Italic Sans", category: "bold", fn: t => toMap(maps.boldItalicSans, t) },
+  { label: "Bubble ⓑ", category: "bubble", fn: t => toMap(bubbleMap, t) },
+  { label: "Negative Bubble", category: "bubble", fn: t => toMap(negBubbleMap, t) },
+  { label: "Square Box", category: "bubble", fn: t => toMap(squareMap, t) },
+  { label: "Negative Square", category: "bubble", fn: t => toMap(negSquareMap, t) },
+  { label: "Gothic Fraktur", category: "gothic", fn: t => toMap(maps.fraktur, t) },
+  { label: "Bold Fraktur", category: "gothic", fn: t => toMap(maps.boldFraktur, t) },
   { label: "꧁ ──── ꧂", category: "symbol", fn: t => `꧁${t}꧂` },
   { label: "★彡 Border", category: "symbol", fn: t => `★彡${t}彡★` },
-  { label: "ꀰꀸ Frame", category: "symbol", fn: t => `ꀰꀸ ${t} ꀸꀰ` },
   { label: "𝄞 Music", category: "symbol", fn: t => `𝄞 ${t} 𝄞` },
-  { label: "✯ Stars", category: "symbol", fn: t => `✯ ${t} ✯` },
-  { label: "⚡ Lightning", category: "symbol", fn: t => `⚡ ${t} ⚡` },
+  { label: "⚡ Lightning", category: "symbol", fn: t => `⚡${t}⚡` },
   { label: "🔥 Fire", category: "symbol", fn: t => `🔥${t}🔥` },
   { label: "💎 Diamond", category: "symbol", fn: t => `💎 ${t} 💎` },
   { label: "👑 Crown", category: "symbol", fn: t => `👑 ${t} 👑` },
-  { label: "「 」Bracket", category: "symbol", fn: t => `「${t}」` },
   { label: "【 】Bold Box", category: "symbol", fn: t => `【${t}】` },
-  { label: "〖 〗Bracket", category: "symbol", fn: t => `〖${t}〗` },
-  { label: "『 』Quote", category: "symbol", fn: t => `『${t}』` },
-  { label: "⟦ ⟧ Math", category: "symbol", fn: t => `⟦${t}⟧` },
-  { label: "꩜ Spiral", category: "symbol", fn: t => `꩜${t}꩜` },
+  { label: "꧁༒☬ Evil", category: "symbol", fn: t => `꧁༒☬${t}☬༒꧂` },
+  { label: "꧁༺ Fancy", category: "symbol", fn: t => `꧁༺${t}༻꧂` },
+  { label: "꧁✤ Floral", category: "symbol", fn: t => `꧁✤${t}✤꧂` },
+  { label: "✦ Diamond Dot", category: "symbol", fn: t => `✦${t}✦` },
   { label: "ツ Smiley", category: "symbol", fn: t => `ツ ${t} ツ` },
   { label: "⊱✿ Flower", category: "symbol", fn: t => `⊱✿ ${t} ✿⊰` },
-  { label: "✦ Diamond Dot", category: "symbol", fn: t => `✦${t}✦` },
-  { label: "꧁༒☬ Evil", category: "symbol", fn: t => `꧁༒☬${t}☬༒꧂` },
-  { label: "꧁༺ Fancy Border", category: "symbol", fn: t => `꧁༺${t}༻꧂` },
-  { label: "꧁✤ Floral", category: "symbol", fn: t => `꧁✤${t}✤꧂` },
-
-  // FANCY combos
+  { label: "「 」Bracket", category: "symbol", fn: t => `「${t}」` },
+  { label: "✯ Stars", category: "symbol", fn: t => `✯ ${t} ✯` },
   { label: "Sᴍᴀʟʟ Cᴀᴘs", category: "fancy", fn: t => toSmallCaps(t) },
-  { label: "Uᵖˢⁱᵈᵉ ᴅoʷn", category: "fancy", fn: t => toUpsideDown(t) },
+  { label: "Uᵖˢⁱᵈᵉ Down", category: "fancy", fn: t => toUpsideDown(t) },
   { label: "Z̶a̶l̶g̶o̶ Glitch", category: "fancy", fn: t => toZalgo(t) },
-  { label: "Strikethrough", category: "fancy", fn: t => [...t].map(c => c + '̶').join('') },
-  { label: "Underline Text", category: "fancy", fn: t => [...t].map(c => c + '̲').join('') },
-  { label: "Slash Through", category: "fancy", fn: t => [...t].map(c => c + '̷').join('') },
+  { label: "Strikethrough", category: "fancy", fn: t => [...t].map(c=>c+'̶').join('') },
+  { label: "Underline", category: "fancy", fn: t => [...t].map(c=>c+'̲').join('') },
   { label: "S p a c e d", category: "fancy", fn: t => [...t].join(' ') },
-  { label: "W-i-d-e", category: "fancy", fn: t => [...t].join('-') },
-  { label: "Monospace", category: "fancy", fn: t => toMono(t) },
-  { label: "Inverted Sans", category: "fancy", fn: t => toSans(t) },
-  { label: "Italic Sans", category: "fancy", fn: t => toItalicSans(t) },
-  { label: "Fullwidth Ａ", category: "fancy", fn: t => toFullwidth(t) },
-  { label: "ᴛɪɴʏ ʟᴇᴛᴛᴇʀs", category: "fancy", fn: t => toTiny(t) },
-  { label: "Superscript ˢᵘᵖ", category: "fancy", fn: t => toSuperscript(t) },
-  { label: "Mirror Text", category: "fancy", fn: t => [...t].reverse().join('') },
+  { label: "Monospace", category: "fancy", fn: t => toMap(maps.mono, t) },
+  { label: "Italic Sans", category: "fancy", fn: t => toMap(maps.italicSans, t) },
+  { label: "Fullwidth Ａ", category: "fancy", fn: t => toMap(maps.fullwidth, t) },
+  { label: "ᴛɪɴʏ Letters", category: "fancy", fn: t => toTiny(t) },
+  { label: "Superscriptˢᵘᵖ", category: "fancy", fn: t => toSuper(t) },
+  { label: "Mirror ↩", category: "fancy", fn: t => [...t].reverse().join('') },
 ];
 
-// ═══════════════════════════════════════════
-//  UNICODE CONVERSION MAPS
-// ═══════════════════════════════════════════
+// ════════════════════════════════════════
+//  UNICODE MAPS
+// ════════════════════════════════════════
 function makeMap(from, to) {
   const m = {};
-  for (let i = 0; i < from.length; i++) m[from[i]] = to[i];
+  for (let i=0;i<from.length;i++) m[from[i]]=to[i];
   return m;
 }
-
-const AZ = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
+const AZ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 const maps = {
-  script:       makeMap(AZ, '𝒜ℬ𝒞𝒟ℰℱ𝒢ℋℐ𝒥𝒦ℒℳ𝒩𝒪𝒫𝒬ℛ𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵𝒶𝒷𝒸𝒹ℯ𝒻ℊ𝒽𝒾𝒿𝓀𝓁𝓂𝓃ℴ𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏0123456789'),
-  boldScript:   makeMap(AZ, '𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃0123456789'),
-  italic:       makeMap(AZ, '𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍𝑎𝑏𝑐𝑑𝑒𝑓𝑔ℎ𝑖𝑗𝑘𝑙𝑚𝑛𝑜𝑝𝑞𝑟𝑠𝑡𝑢𝑣𝑤𝑥𝑦𝑧0123456789'),
-  boldSerif:    makeMap(AZ, '𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗'),
-  boldItalic:   makeMap(AZ, '𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝒍𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛0123456789'),
-  boldSans:     makeMap(AZ, '𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵'),
-  boldItalicSans: makeMap(AZ, '𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄𝙅𝙆𝙇𝙈𝙉𝙊𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡𝙢𝙣𝙤𝙥𝙦𝙧𝙨𝙩𝙪𝙫𝙬𝙭𝙮𝙯0123456789'),
-  fraktur:      makeMap(AZ, '𝔄𝔅ℭ𝔇𝔈𝔉𝔊ℌℑ𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔ℜ𝔖𝔗𝔘𝔙𝔚𝔛𝔜ℨ𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷0123456789'),
-  boldFraktur:  makeMap(AZ, '𝕬𝕭𝕮𝕯𝕰𝕱𝕲𝕳𝕴𝕵𝕶𝕷𝕸𝕹𝕺𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟0123456789'),
-  doubleStruck: makeMap(AZ, '𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡'),
-  mono:         makeMap(AZ, '𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿'),
-  sans:         makeMap(AZ, '𝖠𝖡𝖢𝖣𝖤𝖥𝖦𝖧𝖨𝖩𝖪𝖫𝖬𝖭𝖮𝖯𝖰𝖱𝖲𝖳𝖴𝖵𝖶𝖷𝖸𝖹𝖺𝖻𝖼𝖽𝖾𝖿𝗀𝗁𝗂𝗃𝗄𝗅𝗆𝗇𝗈𝗉𝗊𝗋𝗌𝗍𝗎𝗏𝗐𝗑𝗒𝗓𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫'),
-  italicSans:   makeMap(AZ, '𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻0123456789'),
-  fullwidth:    makeMap(AZ, 'ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ０１２３４５６７８９'),
+  script:       makeMap(AZ,'𝒜ℬ𝒞𝒟ℰℱ𝒢ℋℐ𝒥𝒦ℒℳ𝒩𝒪𝒫𝒬ℛ𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵𝒶𝒷𝒸𝒹ℯ𝒻ℊ𝒽𝒾𝒿𝓀𝓁𝓂𝓃ℴ𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏0123456789'),
+  boldScript:   makeMap(AZ,'𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃0123456789'),
+  italic:       makeMap(AZ,'𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍𝑎𝑏𝑐𝑑𝑒𝑓𝑔ℎ𝑖𝑗𝑘𝑙𝑚𝑛𝑜𝑝𝑞𝑟𝑠𝑡𝑢𝑣𝑤𝑥𝑦𝑧0123456789'),
+  boldSerif:    makeMap(AZ,'𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗'),
+  boldItalic:   makeMap(AZ,'𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝒍𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛0123456789'),
+  boldSans:     makeMap(AZ,'𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵'),
+  boldItalicSans:makeMap(AZ,'𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄𝙅𝙆𝙇𝙈𝙉𝙊𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡𝙢𝙣𝙤𝙥𝙦𝙧𝙨𝙩𝙪𝙫𝙬𝙭𝙮𝙯0123456789'),
+  fraktur:      makeMap(AZ,'𝔄𝔅ℭ𝔇𝔈𝔉𝔊ℌℑ𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔ℜ𝔖𝔗𝔘𝔙𝔚𝔛𝔜ℨ𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷0123456789'),
+  boldFraktur:  makeMap(AZ,'𝕬𝕭𝕮𝕯𝕰𝕱𝕲𝕳𝕴𝕵𝕶𝕷𝕸𝕹𝕺𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟0123456789'),
+  doubleStruck: makeMap(AZ,'𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡'),
+  mono:         makeMap(AZ,'𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿'),
+  italicSans:   makeMap(AZ,'𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻0123456789'),
+  fullwidth:    makeMap(AZ,'ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ０１２３４５６７８９'),
 };
+const bubbleMap    = makeMap(AZ,'ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ⓪①②③④⑤⑥⑦⑧⑨');
+const negBubbleMap = makeMap('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz','🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩');
+const squareMap    = makeMap('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz','🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉');
+const negSquareMap = makeMap('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz','🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉');
+const smallCapsMap = makeMap('abcdefghijklmnopqrstuvwxyz','ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀꜱᴛᴜᴠᴡxʏᴢ');
+const upsideDownMap= makeMap('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ','ɐqɔpǝɟƃɥᴉɾʞlɯuodbɹsʇnʌʍxʎz∀qƆpƎℲפHIſʞ˥WNOdQɹS┴∩ΛMX⅄Z');
+const superMap2    = makeMap('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789','ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖqʳˢᵗᵘᵛʷˣʸᶻᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁᵛᵂˣʸᶻ⁰¹²³⁴⁵⁶⁷⁸⁹');
+const tinyMap2     = makeMap('abcdefghijklmnopqrstuvwxyz','ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖqʳˢᵗᵘᵛʷˣʸᶻ');
 
-const smallCapsMap = makeMap('abcdefghijklmnopqrstuvwxyz', 'ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀꜱᴛᴜᴠᴡxʏᴢ');
-const upsideDownMap = makeMap('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 'ɐqɔpǝɟƃɥᴉɾʞlɯuodbɹsʇnʌʍxʎz∀qƆpƎℲפHIſʞ˥WNOdQɹS┴∩ΛMX⅄Z');
-const superMap = makeMap('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖqʳˢᵗᵘᵛʷˣʸᶻᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁᵛᵂˣʸᶻ⁰¹²³⁴⁵⁶⁷⁸⁹');
-const tinyMap = makeMap('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 'ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖqʳˢᵗᵘᵛʷˣʸᶻᴬᴮᴄᴰᴱᴦᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᴜᵛᵂˣʸᶻ');
-const bubbleMap = makeMap('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', 'ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ⓪①②③④⑤⑥⑦⑧⑨');
-const negBubbleMap = makeMap('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', '🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩0123456789');
-const squareMap = makeMap('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz', '🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉');
-const negSquareMap = makeMap('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz', '🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉');
+function toMap(map,t){return[...t].map(c=>map[c]||c).join('');}
+function toSmallCaps(t){return[...t.toLowerCase()].map(c=>smallCapsMap[c]||c.toUpperCase()).join('');}
+function toUpsideDown(t){return[...t].map(c=>upsideDownMap[c]||c).reverse().join('');}
+function toSuper(t){return[...t].map(c=>superMap2[c]||c).join('');}
+function toTiny(t){return[...t].map(c=>tinyMap2[c]||c).join('');}
+const zalgoArr=['̍','̎','̄','̅','̿','̑','̆','̐','͒','͗','͑','̇','̈','̊','͂','̓','̈','͊','͋','͌','̃','̂','̌','͐','̀','́','̋','̏','̒','̓','̔','̽','̉'];
+function toZalgo(t){return[...t].map(c=>{let z=c;for(let i=0;i<3;i++)z+=zalgoArr[Math.floor(Math.random()*zalgoArr.length)];return z;}).join('');}
 
-function convert(map, text) {
-  return [...text].map(c => map[c] || c).join('');
-}
-
-function toScript(t) { return convert(maps.script, t); }
-function toBoldScript(t) { return convert(maps.boldScript, t); }
-function toItalic(t) { return convert(maps.italic, t); }
-function toDoubleStruck(t) { return convert(maps.doubleStruck, t); }
-function toBoldSerif(t) { return convert(maps.boldSerif, t); }
-function toBoldItalic(t) { return convert(maps.boldItalic, t); }
-function toBoldSans(t) { return convert(maps.boldSans, t); }
-function toBoldItalicSans(t) { return convert(maps.boldItalicSans, t); }
-function toFraktur(t) { return convert(maps.fraktur, t); }
-function toBoldFraktur(t) { return convert(maps.boldFraktur, t); }
-function toGothicDouble(t) { return convert(maps.doubleStruck, t).toUpperCase(); }
-function toBubble(t) { return convert(bubbleMap, t); }
-function toNegBubble(t) { return convert(negBubbleMap, t); }
-function toSquare(t) { return convert(squareMap, t); }
-function toNegSquare(t) { return convert(negSquareMap, t); }
-function toSmallCaps(t) { return [...t.toLowerCase()].map(c => smallCapsMap[c] || c).join(''); }
-function toUpsideDown(t) { return [...t].map(c => upsideDownMap[c] || c).reverse().join(''); }
-function toMono(t) { return convert(maps.mono, t); }
-function toSans(t) { return convert(maps.sans, t); }
-function toItalicSans(t) { return convert(maps.italicSans, t); }
-function toFullwidth(t) { return convert(maps.fullwidth, t); }
-function toSuperscript(t) { return convert(superMap, t); }
-function toTiny(t) { return convert(tinyMap, t); }
-
-const zalgoUp = ['̍','̎','̄','̅','̿','̑','̆','̐','͒','͗','͑','̇','̈','̊','͂','̓','̈','͊','͋','͌','̃','̂','̌','͐','̀','́','̋','̏','̒','̓','̔','̽','̉','ͣ','ͤ','ͥ','ͦ','ͧ','ͨ','ͩ','ͪ','ͫ','ͬ','ͭ','ͮ','ͯ','̾','͛','͆','̚'];
-function toZalgo(t) {
-  return [...t].map(c => {
-    let z = c;
-    for(let i=0;i<3;i++) z += zalgoUp[Math.floor(Math.random()*zalgoUp.length)];
-    return z;
-  }).join('');
-}
-
-// ═══════════════════════════════════════════
+// ════════════════════════════════════════
 //  GENERATE & RENDER
-// ═══════════════════════════════════════════
-let currentFilter = 'all';
-let lastText = '';
+// ════════════════════════════════════════
+let currentFilter='all', lastText='';
 
-function setName(name) {
-  document.getElementById('nameInput').value = name;
-  generateFonts();
+function setName(n){ document.getElementById('nameInput').value=n; generateFonts(); }
+
+function generateFonts(){
+  const text=document.getElementById('nameInput').value.trim();
+  if(!text) return;
+  lastText=text;
+  renderFonts(text,currentFilter);
+  document.getElementById('midAdWrap').style.display='flex';
+  document.getElementById('afterResultsAd').style.display='flex';
 }
 
-function generateFonts() {
-  const text = document.getElementById('nameInput').value.trim();
-  if (!text) return;
-  lastText = text;
-  renderFonts(text, currentFilter);
-  document.getElementById('midAd').style.display = 'flex';
-}
-
-function filterFonts(category, btn) {
-  currentFilter = category;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+function filterFonts(cat,btn){
+  currentFilter=cat;
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
-  if (lastText) renderFonts(lastText, category);
+  if(lastText) renderFonts(lastText,cat);
 }
 
-function renderFonts(text, category) {
-  const grid = document.getElementById('resultsGrid');
-  const filtered = category === 'all' ? fonts : fonts.filter(f => f.category === category);
-  document.getElementById('resultsCount').textContent = `${filtered.length} styles found for "${text}"`;
+function renderFonts(text,category){
+  const grid=document.getElementById('resultsGrid');
+  const filtered=category==='all'?fonts:fonts.filter(f=>f.category===category);
+  const cnt=filtered.length;
+  document.getElementById('resultsCount').textContent = isEnglish
+    ? `${cnt} styles found for "${text}"`
+    : `"${text}" এর জন্য ${cnt}টি স্টাইল পাওয়া গেছে`;
 
-  grid.innerHTML = '';
-  filtered.forEach((font, i) => {
-    const result = font.fn(text);
-    const card = document.createElement('div');
-    card.className = 'font-card';
-    card.innerHTML = `
+  grid.innerHTML='';
+  filtered.forEach(font=>{
+    const result=font.fn(text);
+    const card=document.createElement('div');
+    card.className='font-card';
+    card.innerHTML=`
       <div>
         <div class="font-label">${font.label}</div>
-        <div class="font-text">${escapeHtml(result)}</div>
+        <div class="font-text">${esc(result)}</div>
       </div>
-      <button class="copy-btn" onclick="copyText(this, '${escapeAttr(result)}')">Copy</button>
+      <button class="copy-btn" onclick="copyText(this,${JSON.stringify(result)})">${isEnglish?'Copy':'কপি'}</button>
     `;
     grid.appendChild(card);
   });
 }
 
-function escapeHtml(s) {
-  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-}
-function escapeAttr(s) {
-  return s.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-}
+function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
-function copyText(btn, text) {
-  navigator.clipboard.writeText(text).then(() => {
-    btn.textContent = '✓ Copied!';
+function copyText(btn,text){
+  navigator.clipboard.writeText(text).then(()=>{
+    btn.textContent='✓ '+(isEnglish?'Copied!':'হয়েছে!');
     btn.classList.add('copied');
-    setTimeout(() => {
-      btn.textContent = 'Copy';
-      btn.classList.remove('copied');
-    }, 1800);
+    setTimeout(()=>{ btn.textContent=isEnglish?'Copy':'কপি'; btn.classList.remove('copied'); },1800);
   });
 }
 
-function toggleFaq(el) {
-  el.classList.toggle('open');
-}
+function toggleFaq(el){ el.classList.toggle('open'); }
 
-// Auto-generate on Enter
-document.getElementById('nameInput').addEventListener('keydown', e => {
-  if (e.key === 'Enter') generateFonts();
-});
+document.getElementById('nameInput').addEventListener('keydown',e=>{ if(e.key==='Enter') generateFonts(); });
 </script>
 </body>
 </html>

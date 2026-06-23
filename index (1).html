@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stylish Name Generator - Copy Fancy Text & Fonts</title>
+  <meta name="description" content="Generate stylish names and fancy text for Free Fire, PUBG, Instagram, Facebook and more. 100+ font styles, copy with one click!" />
+  <meta name="keywords" content="stylish name, fancy text, name generator, free fire name, pubg name, instagram fonts, facebook fonts, cool text" />
+  <meta name="author" content="StylishNamePro" />
+  <meta property="og:title" content="Stylish Name Generator - Fancy Text Fonts" />
+  <meta property="og:description" content="100+ stylish font styles for gaming and social media. Free & instant!" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <!-- ========== ADSTERRA TOP BANNER ========== -->
+  <!-- Replace the script below with your Adsterra banner code -->
+  <!--
+  <script async src="//your-adsterra-code.js"></script>
+  -->
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f0f1a;
+      --surface: #1a1a2e;
+      --card: #16213e;
+      --border: #2a2a4a;
+      --accent: #7c3aed;
+      --accent2: #a855f7;
+      --glow: #7c3aed55;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --success: #22c55e;
+      --radius: 14px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 62px;
+    }
+    .logo {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      background: linear-gradient(135deg, #a855f7, #7c3aed, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      margin-left: 20px;
+      transition: color .2s;
+    }
+    nav a:hover { color: var(--accent2); }
+
+    /* ── TOP AD ── */
+    .ad-banner {
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-align: center;
+    }
+    .ad-top {
+      max-width: 728px;
+      margin: 20px auto 0;
+      height: 90px;
+    }
+    .ad-side {
+      width: 160px;
+      min-height: 600px;
+      flex-shrink: 0;
+    }
+    .ad-mid {
+      height: 90px;
+      margin: 24px 0;
+    }
+    .ad-bottom {
+      height: 90px;
+      max-width: 728px;
+      margin: 0 auto 24px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+    .hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .hero h1 span {
+      background: linear-gradient(135deg, #a855f7, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto 28px;
+    }
+
+    /* ── INPUT AREA ── */
+    .input-wrap {
+      max-width: 700px;
+      margin: 0 auto 10px;
+      position: relative;
+    }
+    .input-wrap input {
+      width: 100%;
+      background: var(--surface);
+      border: 2px solid var(--border);
+      border-radius: 50px;
+      padding: 16px 130px 16px 24px;
+      font-size: 1.1rem;
+      color: var(--text);
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .input-wrap input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px var(--glow);
+    }
+    .input-wrap input::placeholder { color: var(--muted); }
+    .btn-generate {
+      position: absolute;
+      right: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(135deg, var(--accent), #6366f1);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 10px 24px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: opacity .2s, transform .15s;
+    }
+    .btn-generate:hover { opacity: .9; transform: translateY(-50%) scale(1.03); }
+    .btn-generate:active { transform: translateY(-50%) scale(0.97); }
+
+    .quick-tags {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .quick-tags span {
+      display: inline-block;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 4px 14px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin: 4px 3px;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .quick-tags span:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+    }
+
+    /* ── MAIN LAYOUT ── */
+    .main-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px 40px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+    .results-area { flex: 1; min-width: 0; }
+
+    /* ── FILTER TABS ── */
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .filter-btn {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 6px 16px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all .2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    /* ── RESULTS GRID ── */
+    .results-count {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media(max-width: 600px) { .results-grid { grid-template-columns: 1fr; } }
+
+    .font-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      transition: border-color .2s, box-shadow .2s;
+      cursor: default;
+    }
+    .font-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 12px var(--glow);
+    }
+    .font-card .font-label {
+      font-size: 0.68rem;
+      color: var(--muted);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+    .font-card .font-text {
+      font-size: 1.15rem;
+      color: var(--text);
+      word-break: break-all;
+      line-height: 1.4;
+    }
+    .copy-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 7px 14px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      cursor: pointer;
+      white-space: nowrap;
+      font-family: 'Inter', sans-serif;
+      transition: all .2s;
+      flex-shrink: 0;
+    }
+    .copy-btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .copy-btn.copied {
+      background: var(--success);
+      border-color: var(--success);
+      color: #fff;
+    }
+
+    /* empty state */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+      grid-column: 1/-1;
+    }
+    .empty-state .emoji { font-size: 3rem; margin-bottom: 12px; }
+    .empty-state p { font-size: 1rem; }
+
+    /* ── INFO SECTION ── */
+    .info-section {
+      max-width: 1100px;
+      margin: 0 auto 40px;
+      padding: 0 16px;
+    }
+    .info-section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+    .info-card .icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .info-card h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .info-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .faq-item h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-item p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 10px;
+      line-height: 1.6;
+      display: none;
+    }
+    .faq-item.open p { display: block; }
+    .faq-item .arrow { transition: transform .3s; }
+    .faq-item.open .arrow { transform: rotate(180deg); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 30px 20px;
+      text-align: center;
+    }
+    footer .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      margin: 0 12px;
+      transition: color .2s;
+    }
+    footer .footer-links a:hover { color: var(--accent2); }
+    footer p {
+      margin-top: 12px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    @media(max-width: 768px) {
+      .ad-side { display: none; }
+      .ad-top { height: 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">✦ StylishNamePro</a>
+    <nav>
+      <a href="#how">How to Use</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<!-- TOP AD BANNER (728x90) -->
+<div class="ad-banner ad-top">
+  <!-- ✅ ADSTERRA: Paste your 728x90 banner code here -->
+  <span>[ Adsterra Ad — 728×90 ]</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>✦ <span>Stylish Name</span> Generator</h1>
+  <p>Type your name and get 100+ fancy text styles instantly. Perfect for Free Fire, PUBG, Instagram & Facebook.</p>
+</div>
+
+<!-- INPUT -->
+<div class="input-wrap">
+  <input type="text" id="nameInput" placeholder="Type your name here..." maxlength="30" autocomplete="off" />
+  <button class="btn-generate" onclick="generateFonts()">Generate ✨</button>
+</div>
+<div class="quick-tags">
+  <span onclick="setName('Raju')">Raju</span>
+  <span onclick="setName('Sami')">Sami</span>
+  <span onclick="setName('Rakib')">Rakib</span>
+  <span onclick="setName('BOSS')">BOSS</span>
+  <span onclick="setName('King')">King</span>
+  <span onclick="setName('Devil')">Devil</span>
+  <span onclick="setName('Pro')">Pro</span>
+  <span onclick="setName('Shadow')">Shadow</span>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrap">
+
+  <!-- LEFT SIDE AD (160x600) -->
+  <div class="ad-banner ad-side">
+    <!-- ✅ ADSTERRA: Paste your 160x600 sidebar ad code here -->
+    <span>[ Adsterra<br>160×600 ]</span>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="results-area">
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" onclick="filterFonts('all', this)">All Styles</button>
+      <button class="filter-btn" onclick="filterFonts('cursive', this)">Cursive</button>
+      <button class="filter-btn" onclick="filterFonts('bold', this)">Bold</button>
+      <button class="filter-btn" onclick="filterFonts('bubble', this)">Bubble</button>
+      <button class="filter-btn" onclick="filterFonts('gothic', this)">Gothic</button>
+      <button class="filter-btn" onclick="filterFonts('symbol', this)">Symbol</button>
+      <button class="filter-btn" onclick="filterFonts('fancy', this)">Fancy</button>
+    </div>
+
+    <div class="results-count" id="resultsCount"></div>
+
+    <!-- MID AD -->
+    <div class="ad-banner ad-mid" id="midAd" style="display:none">
+      <!-- ✅ ADSTERRA: Paste your mid-page banner code here -->
+      <span>[ Adsterra Ad — 728×90 ]</span>
+    </div>
+
+    <div class="results-grid" id="resultsGrid">
+      <div class="empty-state">
+        <div class="emoji">✦</div>
+        <p>Type your name above and click <strong>Generate</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE AD (160x600) -->
+  <div class="ad-banner ad-side">
+    <!-- ✅ ADSTERRA: Paste your 160x600 sidebar ad code here -->
+    <span>[ Adsterra<br>160×600 ]</span>
+  </div>
+
+</div>
+
+<!-- BOTTOM AD -->
+<div class="ad-banner ad-bottom">
+  <!-- ✅ ADSTERRA: Paste your bottom banner ad code here -->
+  <span>[ Adsterra Ad — 728×90 ]</span>
+</div>
+
+<!-- INFO SECTION -->
+<div class="info-section" id="how">
+  <h2>How to Use Stylish Name Generator</h2>
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="icon">⌨️</div>
+      <h3>1. Type Your Name</h3>
+      <p>Enter your name or any text in the input box above. You can type up to 30 characters.</p>
+    </div>
+    <div class="info-card">
+      <div class="icon">✨</div>
+      <h3>2. Click Generate</h3>
+      <p>Hit the Generate button and instantly get 100+ stylish font variations of your name.</p>
+    </div>
+    <div class="info-card">
+      <div class="icon">📋</div>
+      <h3>3. Copy & Paste</h3>
+      <p>Click the Copy button next to any style you like and paste it anywhere — games or social media.</p>
+    </div>
+    <div class="info-card">
+      <div class="icon">🎮</div>
+      <h3>Works Everywhere</h3>
+      <p>Use your stylish name in Free Fire, PUBG Mobile, Instagram bio, Facebook name, and more.</p>
+    </div>
+  </div>
+
+  <h2 id="faq">Frequently Asked Questions</h2>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <h3>What is a Stylish Name Generator? <span class="arrow">▾</span></h3>
+    <p>A stylish name generator is a free tool that converts your regular text into fancy Unicode characters. These special characters look like different fonts and can be copied and pasted anywhere that supports text input.</p>
+  </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <h3>How does fancy text work? <span class="arrow">▾</span></h3>
+    <p>Fancy text uses Unicode characters — a universal character encoding standard — that look like styled letters. They aren't actual fonts, but special Unicode symbols that appear as decorative characters in any app.</p>
+  </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <h3>Can I use these names in Free Fire & PUBG? <span class="arrow">▾</span></h3>
+    <p>Yes! Most stylish name styles work in Free Fire, PUBG Mobile, and other games. Simply copy the name and paste it into the nickname input in your game settings.</p>
+  </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <h3>Is this tool free to use? <span class="arrow">▾</span></h3>
+    <p>Yes, StylishNamePro is 100% free. No signup, no login, no limits. Generate as many stylish names as you want!</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="#">Home</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Use</a>
+    <a href="#">Contact</a>
+    <a href="#">About</a>
+  </div>
+  <p>© 2024 StylishNamePro. All rights reserved. | Unicode Fancy Text Generator</p>
+</footer>
+
+<script>
+// ═══════════════════════════════════════════
+//  FONT DATA — 100+ styles with categories
+// ═══════════════════════════════════════════
+const fonts = [
+  // CURSIVE
+  { label: "Cursive Script", category: "cursive", fn: t => toScript(t) },
+  { label: "Bold Cursive", category: "cursive", fn: t => toBoldScript(t) },
+  { label: "Italic Cursive", category: "cursive", fn: t => toItalic(t) },
+  { label: "Double Struck", category: "cursive", fn: t => toDoubleStruck(t) },
+
+  // BOLD
+  { label: "Bold Serif", category: "bold", fn: t => toBoldSerif(t) },
+  { label: "Bold Italic Serif", category: "bold", fn: t => toBoldItalic(t) },
+  { label: "Bold Sans", category: "bold", fn: t => toBoldSans(t) },
+  { label: "Bold Italic Sans", category: "bold", fn: t => toBoldItalicSans(t) },
+
+  // BUBBLE
+  { label: "Bubble Text ⓑ", category: "bubble", fn: t => toBubble(t) },
+  { label: "Negative Bubble", category: "bubble", fn: t => toNegBubble(t) },
+  { label: "Square Box", category: "bubble", fn: t => toSquare(t) },
+  { label: "Negative Square", category: "bubble", fn: t => toNegSquare(t) },
+
+  // GOTHIC
+  { label: "Gothic / Fraktur", category: "gothic", fn: t => toFraktur(t) },
+  { label: "Bold Fraktur", category: "gothic", fn: t => toBoldFraktur(t) },
+  { label: "Gothic Double", category: "gothic", fn: t => toGothicDouble(t) },
+
+  // SYMBOL — decorative combos
+  { label: "꧁ ──── ꧂", category: "symbol", fn: t => `꧁${t}꧂` },
+  { label: "★彡 Border", category: "symbol", fn: t => `★彡${t}彡★` },
+  { label: "ꀰꀸ Frame", category: "symbol", fn: t => `ꀰꀸ ${t} ꀸꀰ` },
+  { label: "𝄞 Music", category: "symbol", fn: t => `𝄞 ${t} 𝄞` },
+  { label: "✯ Stars", category: "symbol", fn: t => `✯ ${t} ✯` },
+  { label: "⚡ Lightning", category: "symbol", fn: t => `⚡ ${t} ⚡` },
+  { label: "🔥 Fire", category: "symbol", fn: t => `🔥${t}🔥` },
+  { label: "💎 Diamond", category: "symbol", fn: t => `💎 ${t} 💎` },
+  { label: "👑 Crown", category: "symbol", fn: t => `👑 ${t} 👑` },
+  { label: "「 」Bracket", category: "symbol", fn: t => `「${t}」` },
+  { label: "【 】Bold Box", category: "symbol", fn: t => `【${t}】` },
+  { label: "〖 〗Bracket", category: "symbol", fn: t => `〖${t}〗` },
+  { label: "『 』Quote", category: "symbol", fn: t => `『${t}』` },
+  { label: "⟦ ⟧ Math", category: "symbol", fn: t => `⟦${t}⟧` },
+  { label: "꩜ Spiral", category: "symbol", fn: t => `꩜${t}꩜` },
+  { label: "ツ Smiley", category: "symbol", fn: t => `ツ ${t} ツ` },
+  { label: "⊱✿ Flower", category: "symbol", fn: t => `⊱✿ ${t} ✿⊰` },
+  { label: "✦ Diamond Dot", category: "symbol", fn: t => `✦${t}✦` },
+  { label: "꧁༒☬ Evil", category: "symbol", fn: t => `꧁༒☬${t}☬༒꧂` },
+  { label: "꧁༺ Fancy Border", category: "symbol", fn: t => `꧁༺${t}༻꧂` },
+  { label: "꧁✤ Floral", category: "symbol", fn: t => `꧁✤${t}✤꧂` },
+
+  // FANCY combos
+  { label: "Sᴍᴀʟʟ Cᴀᴘs", category: "fancy", fn: t => toSmallCaps(t) },
+  { label: "Uᵖˢⁱᵈᵉ ᴅoʷn", category: "fancy", fn: t => toUpsideDown(t) },
+  { label: "Z̶a̶l̶g̶o̶ Glitch", category: "fancy", fn: t => toZalgo(t) },
+  { label: "Strikethrough", category: "fancy", fn: t => [...t].map(c => c + '̶').join('') },
+  { label: "Underline Text", category: "fancy", fn: t => [...t].map(c => c + '̲').join('') },
+  { label: "Slash Through", category: "fancy", fn: t => [...t].map(c => c + '̷').join('') },
+  { label: "S p a c e d", category: "fancy", fn: t => [...t].join(' ') },
+  { label: "W-i-d-e", category: "fancy", fn: t => [...t].join('-') },
+  { label: "Monospace", category: "fancy", fn: t => toMono(t) },
+  { label: "Inverted Sans", category: "fancy", fn: t => toSans(t) },
+  { label: "Italic Sans", category: "fancy", fn: t => toItalicSans(t) },
+  { label: "Fullwidth Ａ", category: "fancy", fn: t => toFullwidth(t) },
+  { label: "ᴛɪɴʏ ʟᴇᴛᴛᴇʀs", category: "fancy", fn: t => toTiny(t) },
+  { label: "Superscript ˢᵘᵖ", category: "fancy", fn: t => toSuperscript(t) },
+  { label: "Mirror Text", category: "fancy", fn: t => [...t].reverse().join('') },
+];
+
+// ═══════════════════════════════════════════
+//  UNICODE CONVERSION MAPS
+// ═══════════════════════════════════════════
+function makeMap(from, to) {
+  const m = {};
+  for (let i = 0; i < from.length; i++) m[from[i]] = to[i];
+  return m;
+}
+
+const AZ = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+const maps = {
+  script:       makeMap(AZ, '𝒜ℬ𝒞𝒟ℰℱ𝒢ℋℐ𝒥𝒦ℒℳ𝒩𝒪𝒫𝒬ℛ𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵𝒶𝒷𝒸𝒹ℯ𝒻ℊ𝒽𝒾𝒿𝓀𝓁𝓂𝓃ℴ𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏0123456789'),
+  boldScript:   makeMap(AZ, '𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃0123456789'),
+  italic:       makeMap(AZ, '𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍𝑎𝑏𝑐𝑑𝑒𝑓𝑔ℎ𝑖𝑗𝑘𝑙𝑚𝑛𝑜𝑝𝑞𝑟𝑠𝑡𝑢𝑣𝑤𝑥𝑦𝑧0123456789'),
+  boldSerif:    makeMap(AZ, '𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗'),
+  boldItalic:   makeMap(AZ, '𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝒍𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛0123456789'),
+  boldSans:     makeMap(AZ, '𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵'),
+  boldItalicSans: makeMap(AZ, '𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄𝙅𝙆𝙇𝙈𝙉𝙊𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡𝙢𝙣𝙤𝙥𝙦𝙧𝙨𝙩𝙪𝙫𝙬𝙭𝙮𝙯0123456789'),
+  fraktur:      makeMap(AZ, '𝔄𝔅ℭ𝔇𝔈𝔉𝔊ℌℑ𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔ℜ𝔖𝔗𝔘𝔙𝔚𝔛𝔜ℨ𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷0123456789'),
+  boldFraktur:  makeMap(AZ, '𝕬𝕭𝕮𝕯𝕰𝕱𝕲𝕳𝕴𝕵𝕶𝕷𝕸𝕹𝕺𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟0123456789'),
+  doubleStruck: makeMap(AZ, '𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡'),
+  mono:         makeMap(AZ, '𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿'),
+  sans:         makeMap(AZ, '𝖠𝖡𝖢𝖣𝖤𝖥𝖦𝖧𝖨𝖩𝖪𝖫𝖬𝖭𝖮𝖯𝖰𝖱𝖲𝖳𝖴𝖵𝖶𝖷𝖸𝖹𝖺𝖻𝖼𝖽𝖾𝖿𝗀𝗁𝗂𝗃𝗄𝗅𝗆𝗇𝗈𝗉𝗊𝗋𝗌𝗍𝗎𝗏𝗐𝗑𝗒𝗓𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫'),
+  italicSans:   makeMap(AZ, '𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻0123456789'),
+  fullwidth:    makeMap(AZ, 'ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ０１２３４５６７８９'),
+};
+
+const smallCapsMap = makeMap('abcdefghijklmnopqrstuvwxyz', 'ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀꜱᴛᴜᴠᴡxʏᴢ');
+const upsideDownMap = makeMap('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 'ɐqɔpǝɟƃɥᴉɾʞlɯuodbɹsʇnʌʍxʎz∀qƆpƎℲפHIſʞ˥WNOdQɹS┴∩ΛMX⅄Z');
+const superMap = makeMap('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖqʳˢᵗᵘᵛʷˣʸᶻᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁᵛᵂˣʸᶻ⁰¹²³⁴⁵⁶⁷⁸⁹');
+const tinyMap = makeMap('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 'ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖqʳˢᵗᵘᵛʷˣʸᶻᴬᴮᴄᴰᴱᴦᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᴜᵛᵂˣʸᶻ');
+const bubbleMap = makeMap('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', 'ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ⓪①②③④⑤⑥⑦⑧⑨');
+const negBubbleMap = makeMap('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', '🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩0123456789');
+const squareMap = makeMap('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz', '🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉');
+const negSquareMap = makeMap('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz', '🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉');
+
+function convert(map, text) {
+  return [...text].map(c => map[c] || c).join('');
+}
+
+function toScript(t) { return convert(maps.script, t); }
+function toBoldScript(t) { return convert(maps.boldScript, t); }
+function toItalic(t) { return convert(maps.italic, t); }
+function toDoubleStruck(t) { return convert(maps.doubleStruck, t); }
+function toBoldSerif(t) { return convert(maps.boldSerif, t); }
+function toBoldItalic(t) { return convert(maps.boldItalic, t); }
+function toBoldSans(t) { return convert(maps.boldSans, t); }
+function toBoldItalicSans(t) { return convert(maps.boldItalicSans, t); }
+function toFraktur(t) { return convert(maps.fraktur, t); }
+function toBoldFraktur(t) { return convert(maps.boldFraktur, t); }
+function toGothicDouble(t) { return convert(maps.doubleStruck, t).toUpperCase(); }
+function toBubble(t) { return convert(bubbleMap, t); }
+function toNegBubble(t) { return convert(negBubbleMap, t); }
+function toSquare(t) { return convert(squareMap, t); }
+function toNegSquare(t) { return convert(negSquareMap, t); }
+function toSmallCaps(t) { return [...t.toLowerCase()].map(c => smallCapsMap[c] || c).join(''); }
+function toUpsideDown(t) { return [...t].map(c => upsideDownMap[c] || c).reverse().join(''); }
+function toMono(t) { return convert(maps.mono, t); }
+function toSans(t) { return convert(maps.sans, t); }
+function toItalicSans(t) { return convert(maps.italicSans, t); }
+function toFullwidth(t) { return convert(maps.fullwidth, t); }
+function toSuperscript(t) { return convert(superMap, t); }
+function toTiny(t) { return convert(tinyMap, t); }
+
+const zalgoUp = ['̍','̎','̄','̅','̿','̑','̆','̐','͒','͗','͑','̇','̈','̊','͂','̓','̈','͊','͋','͌','̃','̂','̌','͐','̀','́','̋','̏','̒','̓','̔','̽','̉','ͣ','ͤ','ͥ','ͦ','ͧ','ͨ','ͩ','ͪ','ͫ','ͬ','ͭ','ͮ','ͯ','̾','͛','͆','̚'];
+function toZalgo(t) {
+  return [...t].map(c => {
+    let z = c;
+    for(let i=0;i<3;i++) z += zalgoUp[Math.floor(Math.random()*zalgoUp.length)];
+    return z;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════
+//  GENERATE & RENDER
+// ═══════════════════════════════════════════
+let currentFilter = 'all';
+let lastText = '';
+
+function setName(name) {
+  document.getElementById('nameInput').value = name;
+  generateFonts();
+}
+
+function generateFonts() {
+  const text = document.getElementById('nameInput').value.trim();
+  if (!text) return;
+  lastText = text;
+  renderFonts(text, currentFilter);
+  document.getElementById('midAd').style.display = 'flex';
+}
+
+function filterFonts(category, btn) {
+  currentFilter = category;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  if (lastText) renderFonts(lastText, category);
+}
+
+function renderFonts(text, category) {
+  const grid = document.getElementById('resultsGrid');
+  const filtered = category === 'all' ? fonts : fonts.filter(f => f.category === category);
+  document.getElementById('resultsCount').textContent = `${filtered.length} styles found for "${text}"`;
+
+  grid.innerHTML = '';
+  filtered.forEach((font, i) => {
+    const result = font.fn(text);
+    const card = document.createElement('div');
+    card.className = 'font-card';
+    card.innerHTML = `
+      <div>
+        <div class="font-label">${font.label}</div>
+        <div class="font-text">${escapeHtml(result)}</div>
+      </div>
+      <button class="copy-btn" onclick="copyText(this, '${escapeAttr(result)}')">Copy</button>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function escapeHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function escapeAttr(s) {
+  return s.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+}
+
+function copyText(btn, text) {
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = '✓ Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = 'Copy';
+      btn.classList.remove('copied');
+    }, 1800);
+  });
+}
+
+function toggleFaq(el) {
+  el.classList.toggle('open');
+}
+
+// Auto-generate on Enter
+document.getElementById('nameInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') generateFonts();
+});
+</script>
+</body>
+</html>
